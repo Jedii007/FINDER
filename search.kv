@@ -1,0 +1,77 @@
+<SearchScreen>:
+    name: 'search'
+    MDLabel:
+        text: 'Hi There!'
+        pos_hint: {'center_x': .6, 'center_y': .90}
+        font_name: 'Poppins-Semibold.ttf'
+        font_size: '20sp'
+        color: rgba(0, 0, 59, 255)
+
+###Search        
+    MDFloatLayout:
+        size_hint: .85, .08
+        pos_hint: {"center_x": .5, "center_y": .55}
+        canvas:
+            Color:
+                rgb: (238/255, 238/255, 238/255, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [25]
+        TextInput:
+            hint_text: "S E A R C H"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+            height: self.minimum_height
+            multiline: False
+            cursor_color: 96/255, 74/255, 215/255, 1
+            cursor_width: "2sp"
+            foreground_color: 96/255, 74/255, 215/255, 1
+            background_color: 0,0,0,0
+            padding: 15
+            font_name: "Poppins-Regular"
+            font_size: "18sp"
+        MDIconButton:
+            icon: "magnify"
+            pos_hint: {"center_x": .90, "center_y": .5}
+
+
+
+
+
+    Button:
+        text: "Services"
+        font_name: "Poppins-Regular"
+        font_size: "15sp"
+        size_hint: .38, .06
+        pos_hint: {"center_x": .3, "center_y": .46}
+        background_color: 0, 0, 0, 0
+        canvas.before:
+            Color:
+                rgb: rgba(86, 36, 208, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [20]
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "service"
+
+            
+    Button:
+        text: "Goods"
+        font_name: "Poppins-Regular"
+        font_size: "15sp"
+        size_hint: .38, .06
+        pos_hint: {"center_x": .7, "center_y": .46}
+        background_color: 0, 0, 0, 0
+        canvas.before:
+            Color:
+                rgb: rgba(242, 168, 22, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [20]
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "goods"

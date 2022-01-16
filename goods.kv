@@ -1,0 +1,21 @@
+ScreenManager:
+    SplashScreen:
+    MenuScreen:
+    ProfileScreen:
+    SignScreen:
+    SearchScreen:
+    GoodsScreen:
+    ServiceScreen:
+
+<GoodsScreen>:
+    name: 'goods'
+    
+    MDIconButton:
+        icon: "chevron-left-circle-outline"
+        pos_hint: {"center_y": .90}
+        user_font_size: "30sp"
+        theme_text_color: "Custom"
+        text_color: rgba(26, 24, 58, 255)
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "search"        

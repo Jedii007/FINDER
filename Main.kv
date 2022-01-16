@@ -1,0 +1,140 @@
+<MenuScreen>:
+    name: 'menu'
+    Button:
+        text: "SIGN UP"
+        font_name: "Poppins-Regular"
+        font_size: "20sp"
+        size_hint: .5, .08
+        pos_hint: {"center_x": .5, "center_y": .30}
+        background_color: 0, 0, 1, 0
+        canvas.before:
+            Color:
+                rgb: rgba(26, 24, 58, 255)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [20]
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = 'sign'
+    Button:
+        text: "LOGIN"
+        font_name: "Poppins-Regular"
+        font_size: "20sp"
+        size_hint: .5, .08
+        pos_hint: {"center_x": .5, "center_y": .40}
+        background_color: 0, 0, 1, 0
+        canvas.before:
+            Color:
+                rgb: rgba(26, 24, 58, 255)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [20]
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = 'login'
+    
+<ProfileScreen>:
+    name: 'login'
+    MDFloatLayout:
+        md_bg_color: 0,0,0,0
+    MDIconButton:
+        icon: "chevron-left-circle-outline"
+        pos_hint: {"center_y": .925}
+        user_font_size: "30sp"
+        theme_text_color: "Custom"
+        text_color: rgba(26, 24, 58, 255)
+        on_release:
+            root.manager.transition.direction = "right"
+            root.manager.current = "menu"        
+  
+    MDLabel:
+        text: "W e l c o m e"
+        pos_hint: {"center_x": .6, "center_y": .85}
+        font_name: "Poppins-Semibold.ttf"
+        font_size: "30sp"
+        text_color: rgba(0, 0, 59, 255)
+    MDLabel:
+        text: "Sign in to continue"
+        pos_hint: {"center_x": .6, "center_y": .79}
+        font_name: "Poppins-Semibold.ttf"
+        font_size: "18sp"
+        color: rgba(135, 133, 193, 255)
+    MDFloatLayout:
+        size_hint: .85, .08
+        pos_hint: {"center_x": .5, "center_y": .65}
+        canvas:
+            Color:
+                rgb: (238/255, 238/255, 238/255, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [25]
+        TextInput:
+            hint_text: "Email"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+            height: self.minimum_height
+            multiline: False
+            cursor_color: 96/255, 74/255, 215/255, 1
+            cursor_width: "2sp"
+            foreground_color: 96/255, 74/255, 215/255, 1
+            background_color: 0,0,0,0
+            padding: 15
+            font_name: "Poppins-Regular" 
+            font_size: "18sp"
+    MDFloatLayout:
+        size_hint: .85, .08
+        pos_hint: {"center_x": .5, "center_y": .55}
+        canvas:
+            Color:
+                rgb: (238/255, 238/255, 238/255, 1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [25]
+        TextInput:
+            hint_text: "Password"
+            password: True
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .5}
+            height: self.minimum_height
+            multiline: False
+            cursor_color: 96/255, 74/255, 215/255, 1
+            cursor_width: "2sp"
+            foreground_color: 96/255, 74/255, 215/255, 1
+            background_color: 0,0,0,0
+            padding: 15
+            font_name: "Poppins-Regular"
+            font_size: "18sp"
+    MDTextButton:
+        text: "Forgot Password?"
+        font_name: "Poppins-Regular"
+        theme_text_color: "Custom"
+        text_color: rgba(135, 133, 193, 255)
+        pos_hint: {"center_x": .5, "center_y": .13}
+    Button:
+        text: "LOGIN"
+        font_name: "Poppins-Regular"
+        font_size: "20sp"
+        size_hint: .66, .065
+        pos_hint: {"center_x": .5, "center_y": .45}
+        background_color: 0, 0, 0, 0
+        canvas.before:
+            Color:
+                rgb: rgba(26, 24, 58, 255)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [20]
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "search"
+
+    MDTextButton:
+        text: "Create New Account"
+        font_name: "Poppins-Regular"
+        theme_text_color: "Custom"
+        text_color: rgba(135, 133, 193, 255)
+        pos_hint: {"center_x": .5, "center_y": .08}
