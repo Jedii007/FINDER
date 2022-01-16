@@ -6,6 +6,7 @@ from kivy.core.text import LabelBase
 from kivy.core.window import Window
 from kivymd.uix.behaviors import FakeRectangularElevationBehavior
 from kivymd.uix.floatlayout import MDFloatLayout
+from kivy.base import runTouchApp
 
 Window.size = (	375, 700)
 

@@ -38,5 +38,21 @@ MDLabel:
                 theme_text_color: "Custom"
                 text_color: 1, 0, 0, 1
     
-    
+
+	GridLayout:
+    		size:(root.width, root.height)
+    		size_hint_x: None
+    		size_hint_y: None
+    		cols: 1
+    		height: self.minimum_height
+    		row_default_height: 100
+    		row_force_default: True
+
+text: 'Hello World'
+                font_name: "Poppins-Regular"
+                font_size: "20sp"
+                size_hint: .5, .08
+                pos_hint: {"center_x": .5, "center_y": .20}
+                background_color: rgba(26, 24, 58, 255)
+                
     

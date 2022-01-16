@@ -18,4 +18,31 @@ ScreenManager:
         text_color: rgba(26, 24, 58, 255)
         on_release:
             root.manager.transition.direction = "right"
-            root.manager.current = "search"        
+            root.manager.current = "search"    
+
+    ScrollView:
+    	size_hint_y: .73
+    	pos_hint: {'x':0, 'y': .11}
+    	do_scroll_x: False
+    	do_scroll_y: True
+
+    	GridLayout:
+    		size:(root.width, root.height)
+    		size_hint_x: None
+    		size_hint_y: None
+    		cols: 1
+    		height: self.minimum_height
+    		row_default_height: 180
+    		row_force_default: True
+
+    		Button:
+    			text: 'Hello World'
+    			background_color: (1, 0, 0, 1)
+
+    		Button:
+    			text: 'Hello World'
+    			background_color: (0, 0, 1, 1)
+
+    		Button:
+    			text: 'Hello World'
+    			background_color: (1, 0, 0, 1)    
